@@ -4,7 +4,7 @@ const io=require('socket.io')(8000)
 const users={};
 app.use(cors(
 {
-    origin: ["https://deploy-mern-1whq.vercel.app"],
+    origin: ["https://chat-website-zeta.vercel.app"],
     methods:["POST","GET"],
     credentials:true
 }
