@@ -2,6 +2,13 @@ const { Socket } = require('socket.io');
 
 const io=require('socket.io')(8000)
 const users={};
+app.use(cors(
+{
+    origin: ["https://deploy-mern-1whq.vercel.app"],
+    methods:["POST","GET"],
+    credentials:true
+}
+));
 io.on('connection',Socket=>{
 // if any new user joins let other user connected to the server knows
     Socket.on('new-user-joined',name=>{
